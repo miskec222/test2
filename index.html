@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instrukcije — Demo stranica</title>
+  <meta name="description" content="Demo stranica za instrukcije iz matematike i fizike (GitHub Pages)" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;         /* slate-900 */
+      --card:#111827;       /* gray-900 */
+      --muted:#334155;      /* slate-600 */
+      --text:#e5e7eb;       /* gray-200 */
+      --accent:#22d3ee;     /* cyan-400 */
+      --accent-2:#a78bfa;   /* violet-400 */
+      --ring: rgba(34,211,238,.35);
+      --maxw:1100px;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1024, #0f172a);color:var(--text);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:40;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 4px 20px rgba(167,139,250,.35)}
+    .nav a{opacity:.9}
+    .menu{display:flex;gap:18px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1024;font-weight:700;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(34,211,238,.25)}
+
+    /* Hero */
+    .hero{padding:80px 0 40px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+    .eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#a5b4fc}
+    h1{font-size:clamp(34px,6vw,54px);line-height:1.05;margin:.3em 0 .4em}
+    .lead{font-size:clamp(16px,2.6vw,20px);color:#cbd5e1}
+    .cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:999px;color:#cbd5e1}
+
+    .hero-card{background:radial-gradient(1200px 600px at -20% -10%, rgba(34,211,238,.15), transparent 40%),
+                radial-gradient(900px 500px at 120% 10%, rgba(167,139,250,.15), transparent 40%),
+                var(--card);
+               border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .hero-card h3{margin-top:0}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:14px 0 0;padding:0}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .check{width:22px;height:22px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));flex:0 0 22px}
+
+    /* Sections */
+    section{padding:58px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 .35em}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price{font-size:36px;font-weight:800;margin:.2em 0}
+    .muted{color:#94a3b8}
+
+    /* FAQ */
+    details{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px}
+    details+details{margin-top:12px}
+    summary{cursor:pointer;font-weight:600}
+    summary::-webkit-details-marker{display:none}
+
+    /* Footer */
+    footer{padding:40px 0;color:#94a3b8}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3,.pricing{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo" aria-hidden="true"></div> <span>Demo Instrukcije</span></div>
+      <nav class="menu">
+        <a href="#predmeti">Predmeti</a>
+        <a href="#cijene">Cijene</a>
+        <a href="#faq">Pitanja</a>
+        <a href="#kontakt" class="btn">Rezerviraj termin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="pill"><span>✔</span> Individualni i online termini</div>
+          <h1>Instrukcije iz matematike i fizike — jasno, strpljivo i učinkovito.</h1>
+          <p class="lead">Brzo do razumijevanja gradiva uz strukturirane sate, dodatne materijale i zadatke za doma. Pogodno za osnovnu, srednju školu i fakultet.</p>
+          <div class="cta-row">
+            <a href="#kontakt" class="btn">Zakaži probni sat</a>
+            <a href="#cijene" class="pill">Pogledaj cijene</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>Što dobivaš na svakom satu</h3>
+          <ul class="list">
+            <li><span class="check" aria-hidden="true"></span><span>Jasna objašnjenja i korak‑po‑korak rješenja</span></li>
+            <li><span class="check"></span><span>Materijali i zadaci nakon sata</span></li>
+            <li><span class="check"></span><span>Praćenje napretka i plan učenja</span></li>
+            <li><span class="check"></span><span>Mogućnost online termina (Zoom/Meet)</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PREDMETI -->
+    <section id="predmeti">
+      <div class="container">
+        <h2>Predmeti i programi</h2>
+        <p class="muted">Primjeri sadržaja — zamijeni vlastitim predmetima i opisima.</p>
+        <div class="grid-3" style="margin-top:18px">
+          <div class="card"><h3>Matematika</h3><p>Funkcije, derivacije, integrali, kombinatorika, vjerojatnost, linearna algebra…</p></div>
+          <div class="card"><h3>Fizika</h3><p>Mehanika, elektřika i magnetizam, valovi, termodinamika, optika…</p></div>
+          <div class="card"><h3>Pripreme za ispite</h3><p>Pripreme za državnu maturu i kolokvije — plan učenja i simulacije ispita.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIJENE -->
+    <section id="cijene">
+      <div class="container">
+        <h2>Cjenik</h2>
+        <p class="muted">Primjeri — prilagodi svojim cijenama i paketima.</p>
+        <div class="pricing" style="margin-top:18px">
+          <div class="card">
+            <h3>Pojedinačni sat</h3>
+            <div class="price">€20</div>
+            <p class="muted">45–60 min · online ili uživo</p>
+          </div>
+          <div class="card" style="border:2px solid var(--accent);">
+            <h3>Paket 5 sati</h3>
+            <div class="price">€90</div>
+            <p class="muted">ušteda 10% · fleksibilni termini</p>
+          </div>
+          <div class="card">
+            <h3>Grupni sat (2–3)</h3>
+            <div class="price">€15</div>
+            <p class="muted">cijena po osobi · 60 min</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2>Česta pitanja</h2>
+        <details open>
+          <summary>Kako funkcioniraju online instrukcije?</summary>
+          <p class="muted">Koristim alate za video poziv i digitalnu ploču. Nakon sata dobivaš bilješke i zadatke.</p>
+        </details>
+        <details>
+          <summary>Mogu li dobiti probni sat?</summary>
+          <p class="muted">Da — kratki probni termin je besplatan. Dogovori ga kroz obrazac u nastavku.</p>
+        </details>
+        <details>
+          <summary>Kako otkazati ili pomaknuti termin?</summary>
+          <p class="muted">Potrebno je javiti najmanje 24h ranije. U protivnom se sat računa kao održan.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <p class="muted">Ovo je demo obrazac s izmišljenim podacima. Zamijeni akcijski URL svojim servisom (npr. Formspree) kad budeš spreman.</p>
+        <div class="card" style="max-width:720px">
+          <form action="#" method="post" onsubmit="alert('Demo: ovdje poveži servis za forme.'); return false;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <label>Ime
+                <input required type="text" placeholder="Marko" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text);outline:none;box-shadow:none" />
+              </label>
+              <label>E-mail
+                <input required type="email" placeholder="test@example.com" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text)" />
+              </label>
+            </div>
+            <label style="display:block;margin-top:12px">Poruka
+              <textarea rows="5" placeholder="Kratko opiši što trebaš..." style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0b1024;color:var(--text)"></textarea>
+            </label>
+            <div style="display:flex;gap:12px;align-items:center;margin-top:14px">
+              <button class="btn" type="submit">Pošalji upit</button>
+              <span class="muted">Demo podaci · nema slanja</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Demo Instrukcije</div>
+      <div class="muted">Ova stranica je demo na GitHub Pagesu · Placeholder sadržaj</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
